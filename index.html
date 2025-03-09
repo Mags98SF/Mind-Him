@@ -43,6 +43,8 @@
         <img id="playerImg" class="player-img" src="" alt="Player Image">
         <h2 id="playerName">Click below to generate</h2>
         <p id="playerStats"></p>
+        <p id="playerBio"></p>
+        <p id="playerCareer"></p>
         <p id="playerCategory"></p>
     </div>
     <button class="btn" onclick="generatePlayer()">Generate Player</button>
@@ -52,31 +54,41 @@
             {
                 name: "Kevin McNaughton",
                 stats: "Clubs: Aberdeen, Cardiff, Bolton",
+                bio: "A no-nonsense right-back with a cult following, McNaughton was beloved at Cardiff for his work ethic and defensive reliability. Known as 'Super Kev,' he was never the flashiest player but won fans over with his dedication. His love for the game extended beyond the pitch, often engaging with supporters and embracing the underdog mentality.",
+                career: "Won the Championship with Cardiff and played in the English Premier League. At Aberdeen, he was a defensive mainstay in a side that competed in European qualifiers. Ended his career bouncing through lower-league sides, maintaining his cult hero status along the way.",
                 category: "Cult Hero",
                 img: "https://via.placeholder.com/100" 
             },
             {
                 name: "Kallum Higginbotham",
                 stats: "Clubs: Falkirk, Partick Thistle, Dunfermline",
+                bio: "A winger with a fiery temperament and a flair for the dramatic, Higginbotham was a fan favorite at Partick Thistle, where his trickery and long-range strikes made him a standout. Known for his confidence, he never shied away from winding up opposition fans and was always capable of a moment of magic.",
+                career: "Played across Scotland’s top leagues and even had a spell in India. Best remembered for his time at Partick Thistle, where he played a key role in their Premiership campaigns. His career was a tour of lower-league football, leaving behind moments of brilliance wherever he went.",
                 category: "Journeyman",
                 img: "https://via.placeholder.com/100"
             },
             {
                 name: "Efe Ambrose",
                 stats: "Clubs: Celtic, Hibernian, Livingston",
+                bio: "A Nigerian international who could produce the spectacular or the disastrous in equal measure, Ambrose was as entertaining as he was unpredictable. At Celtic, he won multiple league titles but was also known for his occasional lapses in concentration that led to comedic defensive errors. Despite this, his technical ability and athleticism made him a valuable player.",
+                career: "Won the Scottish Premiership multiple times with Celtic and played in the UEFA Champions League. Later moved to Hibernian, where he became a key figure in their defensive setup. His career continued in the lower leagues, where he remained a cult figure for fans who appreciated his unique style.",
                 category: "Chaos Merchant",
                 img: "https://via.placeholder.com/100"
             },
             {
                 name: "Nacho Novo",
                 stats: "Clubs: Raith Rovers, Rangers, Dundee",
+                bio: "A diminutive but tenacious Spanish striker, Novo became a Rangers icon with his tireless work rate and knack for scoring crucial goals. A fan favorite for his passion and commitment, he played a key role in Rangers’ domestic success and their run to the 2008 UEFA Cup Final. His fiery nature made him a divisive figure outside of Ibrox.",
+                career: "Scored vital goals in Old Firm derbies and European competitions. Part of the Rangers side that dominated the early 2000s. After leaving Ibrox, he had mixed success at lower-league clubs, but his cult status remained intact among Gers supporters.",
                 category: "Divisive Figure",
                 img: "https://via.placeholder.com/100"
             },
             {
-                name: "Andy Halliday",
-                stats: "Clubs: Rangers, Hearts, Livingston",
-                category: "Did He Even Exist?",
+                name: "Lee McCulloch",
+                stats: "Clubs: Motherwell, Wigan, Rangers",
+                bio: "The definition of a utility player, McCulloch played as a striker, midfielder, and even a center-back. A key figure in Rangers' recovery after financial collapse, he stuck with the club through their rise from the Third Division to the Premiership. His physicality and leadership made him a fan favorite, even if he wasn't the most technically gifted.",
+                career: "Won league titles with Rangers before helping them rebuild from Scotland’s lower tiers. At Motherwell and Wigan, he was a dependable figure, known for his aerial ability and toughness.",
+                category: "Loyal Warrior",
                 img: "https://via.placeholder.com/100"
             }
         ];
@@ -85,6 +97,8 @@
             const randomPlayer = players[Math.floor(Math.random() * players.length)];
             document.getElementById("playerName").textContent = randomPlayer.name;
             document.getElementById("playerStats").textContent = randomPlayer.stats;
+            document.getElementById("playerBio").textContent = "Bio: " + randomPlayer.bio;
+            document.getElementById("playerCareer").textContent = "Career: " + randomPlayer.career;
             document.getElementById("playerCategory").textContent = "Category: " + randomPlayer.category;
             document.getElementById("playerImg").src = randomPlayer.img;
         }
