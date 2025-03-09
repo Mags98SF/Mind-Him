@@ -96,6 +96,7 @@
         <img id="playerImg" class="player-img" src="" alt="Player Image">
         <h2 id="playerName">Click below to generate</h2>
         <p id="playerStats"></p>
+        <p id="playerApps"></p>
         <p id="playerBio"></p>
         <p id="playerCareer"></p>
         <p id="playerCategory" class="player-category"></p>
@@ -107,6 +108,7 @@
             {
                 name: "Kevin McNaughton",
                 stats: "Clubs: Aberdeen, Cardiff, Bolton",
+                apps: "197",
                 bio: "A tenacious right-back with an endless engine, McNaughton was adored at Cardiff City for his no-nonsense defending and versatility.",
                 career: "Helped Cardiff to the Premier League and played in Europe with Aberdeen.",
                 category: "Cult Hero",
@@ -115,6 +117,7 @@
             {
                 name: "Kris Doolan",
                 stats: "Clubs: Partick Thistle, Ayr United, Greenock Morton",
+                apps: "373",
                 bio: "A Partick Thistle legend, Doolan was known for his goal-scoring ability and loyalty to the club.",
                 career: "Scored over 100 goals for Thistle and was a key figure in their top-flight survival years.",
                 category: "Jags Icon",
@@ -123,6 +126,7 @@
             {
                 name: "Russell Latapy",
                 stats: "Clubs: Falkirk, Hibernian, Rangers",
+                apps: "280",
                 bio: "A wizard with the ball, Latapy’s vision and creativity made him a fan-favorite wherever he played.",
                 career: "A crucial playmaker at Hibs and helped Falkirk to success in the Championship.",
                 category: "Creative Maestro",
@@ -131,6 +135,7 @@
             {
                 name: "Gary O’Connor",
                 stats: "Clubs: Hibernian, Birmingham, Lokomotiv Moscow",
+                apps: "215",
                 bio: "A controversial but talented striker, O’Connor had moments of brilliance mixed with off-field issues.",
                 career: "Played for Scotland and was a hero for Hibs, winning the League Cup in 2007.",
                 category: "Maverick Striker",
@@ -139,6 +144,7 @@
             {
                 name: "Craig Beattie",
                 stats: "Clubs: Celtic, Hearts, Dundee, St Johnstone",
+                apps: "183",
                 bio: "A journeyman striker best remembered for THAT iconic celebration in the 2012 Scottish Cup semi-final for Hearts.",
                 career: "Scored the famous penalty that sent Hearts to the cup final, immortalizing him in Gorgie folklore.",
                 category: "Cup Hero",
@@ -147,6 +153,7 @@
             {
                 name: "Efe Ambrose",
                 stats: "Clubs: Celtic, Hibernian, Livingston",
+                apps: "259",
                 bio: "A Nigerian international who could be a defensive wall or a total liability – often in the same game.",
                 career: "Won multiple Scottish Premiership titles with Celtic and became a cult figure at Hibs.",
                 category: "Chaos Merchant",
@@ -155,6 +162,7 @@
             {
                 name: "Kallum Higginbotham",
                 stats: "Clubs: Falkirk, Partick Thistle, Dunfermline",
+                apps: "341",
                 bio: "A flamboyant winger with quick feet and a sharp tongue, Higginbotham made a name for himself with outrageous goals, skill moves, and a bit of attitude.",
                 career: "Best remembered for his spell at Partick Thistle, where he was a constant attacking threat. Had stints in Indian football and across the lower leagues.",
                 category: "Journeyman Showman",
@@ -268,6 +276,7 @@
                 const randomPlayer = players[Math.floor(Math.random() * players.length)];
                 document.getElementById("playerName").textContent = randomPlayer.name;
                 document.getElementById("playerStats").textContent = "📝 " + randomPlayer.stats;
+                document.getElementById("LeagueApps").textContent = "📺 " + randomPlayer.LeagueApps;
                 document.getElementById("playerBio").textContent = "📖 " + randomPlayer.bio;
                 document.getElementById("playerCareer").textContent = "🏆 " + randomPlayer.career;
                 document.getElementById("playerCategory").textContent = "🔥 " + randomPlayer.category;
