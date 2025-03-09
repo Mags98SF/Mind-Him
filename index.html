@@ -29,11 +29,14 @@
             width: 350px;
             margin: auto;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-            transition: 0.3s ease-in-out;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
         }
 
-        .player-card:hover {
-            transform: scale(1.02);
+        .player-card.show {
+            opacity: 1;
+            transform: scale(1);
         }
 
         /* Player Image */
@@ -104,26 +107,58 @@
             {
                 name: "Kevin McNaughton",
                 stats: "Clubs: Aberdeen, Cardiff, Bolton",
-                bio: "A tenacious right-back with an endless engine, McNaughton was adored at Cardiff City for his no-nonsense defending and versatility. Aberdeen fans remember him fondly for his early years before moving south.",
-                career: "A key figure in Cardiff’s promotion to the Premier League in 2013. Also had a solid career in Scotland with Aberdeen, playing in UEFA qualifiers.",
+                bio: "A tenacious right-back with an endless engine, McNaughton was adored at Cardiff City for his no-nonsense defending and versatility.",
+                career: "Helped Cardiff to the Premier League and played in Europe with Aberdeen.",
                 category: "Cult Hero",
-                img: "https://www.pressandjournal.co.uk/wp-content/uploads/sites/2/2022/01/SNS-13684177-St-Johnstone-v-Abe_23351832-1q1eowco0-e1643623509625.jpg" 
+                img: "https://spfl.co.uk/cms-content/images/shares/posts/archive/067_471__kevin_mcnaughton_1472217530_standard.jpg"
             },
+            {
+                name: "Kris Doolan",
+                stats: "Clubs: Partick Thistle, Ayr United, Greenock Morton",
+                bio: "A Partick Thistle legend, Doolan was known for his goal-scoring ability and loyalty to the club.",
+                career: "Scored over 100 goals for Thistle and was a key figure in their top-flight survival years.",
+                category: "Jags Icon",
+                img: "https://e0.365dm.com/18/05/2048x1152/skysports-kris-doolan-partick_4308341.jpg?20180512222151"
+            },
+            {
+                name: "Russell Latapy",
+                stats: "Clubs: Falkirk, Hibernian, Rangers",
+                bio: "A wizard with the ball, Latapy’s vision and creativity made him a fan-favorite wherever he played.",
+                career: "A crucial playmaker at Hibs and helped Falkirk to success in the Championship.",
+                category: "Creative Maestro",
+                img: "https://www.edinburghnews.scotsman.com/webimg/b25lY21zOmQ0YTA0NWFjLTJhNzgtNGU0Yy04OGNhLTRiODI3ZjlhMmQ2ZTpkMTk2NDVmZi0xMGU1LTRiY2UtYWEyZi1hMWUwMTIwM2I3Mzg=.jpg?width=1200&enable=upscale"
+            },
+            {
+                name: "Gary O’Connor",
+                stats: "Clubs: Hibernian, Birmingham, Lokomotiv Moscow",
+                bio: "A controversial but talented striker, O’Connor had moments of brilliance mixed with off-field issues.",
+                career: "Played for Scotland and was a hero for Hibs, winning the League Cup in 2007.",
+                category: "Maverick Striker",
+                img: "https://www.scotsman.com/webimg/legacy_elm_33204692.jpg?width=1200&enable=upscale"
+            },
+            {
+                name: "Craig Beattie",
+                stats: "Clubs: Celtic, Hearts, Dundee, St Johnstone",
+                bio: "A journeyman striker best remembered for THAT iconic celebration in the 2012 Scottish Cup semi-final for Hearts.",
+                career: "Scored the famous penalty that sent Hearts to the cup final, immortalizing him in Gorgie folklore.",
+                category: "Cup Hero",
+                img: "https://e2.365dm.com/12/03/800x600/CraigBeattiecelebHeartsvHibsMar2012_2735794.jpg?20120318140800"
+            },
+            {
+                name: "Efe Ambrose",
+                stats: "Clubs: Celtic, Hibernian, Livingston",
+                bio: "A Nigerian international who could be a defensive wall or a total liability – often in the same game.",
+                career: "Won multiple Scottish Premiership titles with Celtic and became a cult figure at Hibs.",
+                category: "Chaos Merchant",
+                img: "https://i2-prod.footballscotland.co.uk/incoming/article27265832.ece/ALTERNATES/s1200d/0_8825371.jpg"
+            }
             {
                 name: "Kallum Higginbotham",
                 stats: "Clubs: Falkirk, Partick Thistle, Dunfermline",
                 bio: "A flamboyant winger with quick feet and a sharp tongue, Higginbotham made a name for himself with outrageous goals, skill moves, and a bit of attitude.",
                 career: "Best remembered for his spell at Partick Thistle, where he was a constant attacking threat. Had stints in Indian football and across the lower leagues.",
                 category: "Journeyman Showman",
-                img: "https://via.placeholder.com/120"
-            },
-            {
-                name: "Efe Ambrose",
-                stats: "Clubs: Celtic, Hibernian, Livingston",
-                bio: "A Nigerian international with talent and unpredictability in equal measure. Ambrose could be a defensive rock one moment and a chaotic liability the next.",
-                career: "Won multiple league titles with Celtic, but is best remembered for his moments of brilliance mixed with baffling mistakes. Hibs fans also loved him for his passion and composure (most of the time).",
-                category: "Chaos Merchant",
-                img: "https://via.placeholder.com/120"
+                img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Kallum_Higginbotham_Celebration.jpg/1200px-Kallum_Higginbotham_Celebration.jpg"
             },
             {
                 name: "Nacho Novo",
@@ -131,15 +166,7 @@
                 bio: "A fiery Spanish striker who became a Rangers legend with his knack for scoring crucial goals, especially in Old Firm matches and European nights.",
                 career: "Scored the winning penalty in the UEFA Cup semi-final that sent Rangers to the final in 2008. A cult hero among Gers fans, but reviled by rival supporters.",
                 category: "Divisive Fan Favorite",
-                img: "https://via.placeholder.com/120"
-            },
-            {
-                name: "Andy Halliday",
-                stats: "Clubs: Rangers, Hearts, Livingston",
-                bio: "A die-hard Rangers fan who lived his dream playing for the club. Never the most gifted, but gave 100% every time, endearing himself to the Ibrox faithful.",
-                career: "Key figure in Rangers’ climb back to the Premiership. Known for a heated touchline argument with Mark Warburton that made him a cult icon.",
-                category: "Passion Merchant",
-                img: "https://via.placeholder.com/120"
+                img: "https://www.scotsman.com/webimg/legacy_elm_62218292.jpg?width=1200&enable=upscale"
             },
             {
                 name: "Lee McCulloch",
@@ -147,18 +174,28 @@
                 bio: "A warrior in midfield and defense, McCulloch was never flashy but was a leader and battler who helped Rangers through their toughest period.",
                 career: "Won three league titles and played a vital role in Rangers' lower league rebuild after financial collapse. Scored crucial goals and wore the armband with pride.",
                 category: "Loyal Workhorse",
-                img: "https://via.placeholder.com/120"
+                img: "https://e1.365dm.com/12/08/800x600/McCulloch_2808933.jpg?20120809142428"
             }
         ];
 
         function generatePlayer() {
-            const randomPlayer = players[Math.floor(Math.random() * players.length)];
-            document.getElementById("playerName").textContent = randomPlayer.name;
-            document.getElementById("playerStats").textContent = "📝 " + randomPlayer.stats;
-            document.getElementById("playerBio").textContent = "📖 " + randomPlayer.bio;
-            document.getElementById("playerCareer").textContent = "🏆 " + randomPlayer.career;
-            document.getElementById("playerCategory").textContent = "🔥 " + randomPlayer.category;
-            document.getElementById("playerImg").src = randomPlayer.img;
+            const playerCard = document.getElementById("playerCard");
+
+            // Remove show class to restart animation
+            playerCard.classList.remove("show");
+
+            setTimeout(() => {
+                const randomPlayer = players[Math.floor(Math.random() * players.length)];
+                document.getElementById("playerName").textContent = randomPlayer.name;
+                document.getElementById("playerStats").textContent = "📝 " + randomPlayer.stats;
+                document.getElementById("playerBio").textContent = "📖 " + randomPlayer.bio;
+                document.getElementById("playerCareer").textContent = "🏆 " + randomPlayer.career;
+                document.getElementById("playerCategory").textContent = "🔥 " + randomPlayer.category;
+                document.getElementById("playerImg").src = randomPlayer.img;
+
+                // Add show class back after content changes
+                playerCard.classList.add("show");
+            }, 100); // Delay to allow smooth transition
         }
     </script>
 </body>
