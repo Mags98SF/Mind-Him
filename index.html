@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Are Ye? - SPFL Player Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .player-card {
+            border: 2px solid #333;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+        }
+        .player-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Who Are Ye? - SPFL Player Generator</h1>
+    <div class="player-card" id="playerCard">
+        <img id="playerImg" class="player-img" src="" alt="Player Image">
+        <h2 id="playerName">Click below to generate</h2>
+        <p id="playerStats"></p>
+        <p id="playerCategory"></p>
+    </div>
+    <button class="btn" onclick="generatePlayer()">Generate Player</button>
+
+    <script>
+        const players = [
+            {
+                name: "Kevin McNaughton",
+                stats: "Clubs: Aberdeen, Cardiff, Bolton",
+                category: "Cult Hero",
+                img: "https://via.placeholder.com/100" 
+            },
+            {
+                name: "Kallum Higginbotham",
+                stats: "Clubs: Falkirk, Partick Thistle, Dunfermline",
+                category: "Journeyman",
+                img: "https://via.placeholder.com/100"
+            },
+            {
+                name: "Efe Ambrose",
+                stats: "Clubs: Celtic, Hibernian, Livingston",
+                category: "Chaos Merchant",
+                img: "https://via.placeholder.com/100"
+            },
+            {
+                name: "Nacho Novo",
+                stats: "Clubs: Raith Rovers, Rangers, Dundee",
+                category: "Divisive Figure",
+                img: "https://via.placeholder.com/100"
+            },
+            {
+                name: "Andy Halliday",
+                stats: "Clubs: Rangers, Hearts, Livingston",
+                category: "Did He Even Exist?",
+                img: "https://via.placeholder.com/100"
+            }
+        ];
+
+        function generatePlayer() {
+            const randomPlayer = players[Math.floor(Math.random() * players.length)];
+            document.getElementById("playerName").textContent = randomPlayer.name;
+            document.getElementById("playerStats").textContent = randomPlayer.stats;
+            document.getElementById("playerCategory").textContent = "Category: " + randomPlayer.category;
+            document.getElementById("playerImg").src = randomPlayer.img;
+        }
+    </script>
+</body>
+</html>
